@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 
 import urllib2 as ur
 import xml.etree.ElementTree as xmlparser
