@@ -1,0 +1,21 @@
+#!/usr/bin/env python2.7
+
+import FBAPI as fb
+import argparse
+import sys
+from config import *
+
+api = fb.FBAPI(url, token)
+
+parser = argparse.ArgumentParser(prog='list_clients', description='Display a list of clients with their internal FreshBooks ID.')
+parser.add_argument('-l', '--long', action='store_true', help='display additional information.')
+parser.add_argument('-s', '--search', help='search for a specific string in the client list')
+args = parser.parse_args()
+
+if args.long:
+	print "tbd"
+
+clients = fb.get_clients()
+for k in clients:
+	if (args.search and clients[k].name.lower().find(args.search.lower()) > -1) or not args.search:
+		print "%d %s" % (clients[k].id, clients[k].name)

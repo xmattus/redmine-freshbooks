@@ -1,0 +1,5 @@
+Date,User,Activity,Project,Issue,Tracker,Subject,Hours,Comment
+01/29/2013,Alice Sample,Software Development,ACME Industries LLC,1001,Feature,Add graphics to user profile,1.0,""
+01/29/2013,Bob Sample,Project Management,ACME Industries LLC,"","","",0.5,Weekly status meeting
+01/28/2013,Alice Sample,Software Development,ACME Industries LLC,1002,Bug,Rewrite comment system,2.0,""
+01/28/2013,Alice Sample,Software Development,ACME Industries LLC,1003,Support,Answer user questions,1.5,""
