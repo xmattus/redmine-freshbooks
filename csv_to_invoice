@@ -36,7 +36,10 @@ with open(args.filename, 'rb') as csvfile:
 		if not header_read:
 			header_read = True
 			continue
-		ticket = row[4].split(' ')[1][1:-1]
+		try:
+			ticket = row[4].split(' ')[1][1:-1]
+		except:
+			ticket = ''
 		line = HourLine(name=row[2], date=row[1], category=row[3], ticket=ticket, notes=row[5], hours=row[6])
 		description = "[" + line.date + " - " + line.name + "]"
 		if hasattr(line, 'ticket'):
