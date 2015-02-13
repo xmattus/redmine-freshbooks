@@ -36,7 +36,8 @@ with open(args.filename, 'rb') as csvfile:
 		if not header_read:
 			header_read = True
 			continue
-		line = HourLine(name=row[1], date=row[0], category=row[2], ticket=row[4], notes=row[8], hours=row[7])
+		ticket = row[4].split(' ')[1][1:-1]
+		line = HourLine(name=row[2], date=row[1], category=row[3], ticket=ticket, notes=row[5], hours=row[6])
 		description = "[" + line.date + " - " + line.name + "]"
 		if hasattr(line, 'ticket'):
 			if line.ticket.isdigit():
